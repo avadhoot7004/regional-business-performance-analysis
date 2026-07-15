@@ -1,0 +1,28 @@
+name: 'superstore_analytics'
+version: '1.0.0'
+config-version: 2
+
+# connects to the profile name defined in profiles.yml
+profile: 'superstore_analytics'
+
+
+# directory configuration paths
+model-paths: ["models"]
+macro-paths: ["macros"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+# materialization and schema routing configuration
+models:
+  superstore_analytics:
+    # staging layer materializes as VIEWS
+    staging:
+      +materialized: view
+      +schema: stg_superstore
+    # marts or gold layer materializes as TABLES
+    marts:
+      +materialized: table
+      +schema: mart_superstore
+

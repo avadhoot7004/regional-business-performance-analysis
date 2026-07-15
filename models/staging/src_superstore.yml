@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: superstore_raw
+    database: RETAIL_ANALYSIS_DB
+    schema: superstore_raw
+
+    tables:
+      - name: orders

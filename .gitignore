@@ -1,0 +1,30 @@
+# Environment and secrets
+.env
+*.env
+.env.*
+profiles.yml
+
+# virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# python compiled files and cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.ipynb_checkpoints/
+.pytest_cache/
+
+# dbt compiled and log folders
+target/
+dbt_packages/
+logs/
+.user.yml
+
+# operating system temporary files
+.DS_Store
+Thumbs.db
+Desktop.ini

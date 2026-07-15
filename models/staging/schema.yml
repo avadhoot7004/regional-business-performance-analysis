@@ -1,0 +1,33 @@
+version: 2
+
+models:
+  - name: stg_superstore_orders
+    description: "Cleaned and standardized view of raw Superstore orders"
+    columns:
+      - name: row_id
+        description: "Primary key for each transaction line"
+        tests:
+          - unique
+          - not_null
+
+      - name: order_id
+        description: "Standardized Order Identifier"
+        tests:
+          - not_null
+
+      - name: customer_id
+        description: "Standardized Customer Identifier"
+        tests:
+          - not_null
+
+      - name: customer_segment
+        description: "Market segment classification"
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['Consumer', 'Corporate', 'Home Office']
+
+      - name: product_id
+        description: "Standardized Product Identifier"
+        tests:
+          - not_null
