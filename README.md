@@ -28,7 +28,7 @@ graph LR
         D -->|dbt run| E["Gold (MART_SUPERSTORE.mart_region_*)"]
     end
     
-    E -->|python scripts/fetch_marts.py|
+    E -->|python scripts/fetch_marts.py| F
 ```
 
 ### Architectural Phases:
