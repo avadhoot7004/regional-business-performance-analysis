@@ -30,3 +30,6 @@ Thumbs.db
 Desktop.ini
 
 .vscode
+
+#helper script
+run_dbt.py
